@@ -81,7 +81,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`You can now mint your own CyberPunks REMIX NFTs.`);
+  const [feedback, setFeedback] = useState(`You can now mint your own Fantom Ferrets NFTs.`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -127,7 +127,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `The ${CONFIG.NFT_NAME} The CyberPunk REMIX is yours! You can see it on the Opensea Marketplace.`
+          `The ${CONFIG.NFT_NAME} The Fantom Ferret is yours! You can see it on the Opera House Marketplace.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
